@@ -23,6 +23,7 @@ const ListItem = ({
           alt="movie_img"
           width="80px"
           height="80px"
+          style={{ background: "silver" }}
         />
         <div style={{ marginLeft: "15px" }}>
           <p>{title}</p>
