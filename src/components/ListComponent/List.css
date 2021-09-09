@@ -1,0 +1,28 @@
+.list-con {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 30%;
+  height: 85vh;
+  /* white-space: nowrap; */
+  /* margin: 0 calc(-1 * var(--margin));
+  margin-top: var(--padding-medium); */
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.list-con::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .list-con {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .list-con {
+    width: 100%;
+  }
+}

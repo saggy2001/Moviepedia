@@ -1,0 +1,29 @@
+.detail-con {
+  /* background: green; */
+  width: 70%;
+  padding: 0 25px;
+  text-align: center;
+}
+.detail-box {
+  /* background-color: red; */
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.detail-box .overview {
+  width: 70%;
+}
+
+@media screen and (max-width: 768px) {
+  .detail-con {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .detail-con {
+    display: none;
+  }
+}

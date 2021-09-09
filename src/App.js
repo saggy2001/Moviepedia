@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import DetailComponent from "./components/DetailComponent/DetailComponent";
+import List from "./components/ListComponent/List";
+import NavBar from "./components/NavBar/NavBar";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [input, setInput] = useState("");
+  const [movieId, setMovieId] = useState("");
+
+  const onInputChange = (e) => {
+    console.log(e.target.value);
+    setInput(e.target.value);
+  };
+  const onMovieIdChange = (id) => {
+    setMovieId(id);
+    console.log(id);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar onInputChange={onInputChange} />
+      <div style={{ display: "flex" }}>
+        <List input={input} onMovieIdChange={onMovieIdChange} />
+        <DetailComponent movieId={movieId} />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
