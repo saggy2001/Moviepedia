@@ -1,9 +1,10 @@
 .detail-con {
   /* background: green; */
-  width: 70%;
+  width: 65%;
   padding: 0 25px;
   text-align: center;
 }
+
 .detail-box {
   /* background-color: red; */
   height: 80vh;

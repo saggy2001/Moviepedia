@@ -41,7 +41,7 @@ const ListItem = ({
             show
               ? { display: "none" }
               : {
-                  background: "white",
+                  background: "transparent",
                   border: "none",
                   fontSize: "20px",
                   cursor: "pointer",

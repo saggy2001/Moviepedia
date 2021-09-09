@@ -1,7 +1,7 @@
 .list-con {
   overflow-x: hidden;
   overflow-y: scroll;
-  width: 30%;
+  width: 35%;
   height: 85vh;
   /* white-space: nowrap; */
   /* margin: 0 calc(-1 * var(--margin));
