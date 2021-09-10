@@ -11,7 +11,7 @@ const App = () => {
   const [movieId, setMovieId] = useState("");
   // It will be used to set the input value
   const onInputChange = (e) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     // set input value
     setInput(e.target.value);
   };
@@ -19,7 +19,7 @@ const App = () => {
   const onMovieIdChange = (id) => {
     //set movieId
     setMovieId(id);
-    console.log(id);
+    // console.log(id);
   };
 
   return (

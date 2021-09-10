@@ -13,7 +13,7 @@ const DetailComponent = ({ movieId }) => {
       );
       // result variable will store response object fetched from the api
       const result = await res.json();
-      console.log(result);
+      // console.log(result);
       // set detail value
       setDetail(result);
     }
@@ -34,8 +34,8 @@ const DetailComponent = ({ movieId }) => {
           <h1>{detail.original_title}</h1>
           <p>
             {new Date(detail.release_date).getFullYear()} |{" "}
-            {detail.genres[0].name} | {Math.floor(detail.runtime / 60)} hr{" "}
-            {detail.runtime % 60} min
+            {detail.genres.length ? detail.genres.name : null} |{" "}
+            {Math.floor(detail.runtime / 60)} hr {detail.runtime % 60} min
           </p>
           <h4 className="overview">{detail.overview}</h4>
           <p>

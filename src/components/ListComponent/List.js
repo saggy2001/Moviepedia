@@ -19,7 +19,7 @@ const List = ({ input, onMovieIdChange }) => {
     }
     getData();
   }, [input]);
-  console.log(data);
+  // console.log(data);
   return (
     <div className="list-con">
       {/* will check if data has been loaded from the api or not if loaded and data is present then will show list of items */}

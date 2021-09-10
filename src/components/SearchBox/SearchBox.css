@@ -6,6 +6,7 @@
   justify-content: center;
 }
 .search-input {
+  font-size: 20px;
   padding-bottom: 6px;
   margin: 0 15px;
   width: 35%;
@@ -35,5 +36,8 @@
   }
   .search-input {
     width: 100%;
+  }
+  .search-input {
+    font-size: 18px;
   }
 }
