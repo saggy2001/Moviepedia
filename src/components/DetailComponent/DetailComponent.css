@@ -6,6 +6,9 @@
   overflow-y: scroll;
   height: 85vh;
 }
+.detail-con::-webkit-scrollbar {
+  display: none;
+}
 
 .detail-box {
   height: 80vh;

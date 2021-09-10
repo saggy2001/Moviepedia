@@ -10,7 +10,7 @@ const List = ({ input, onMovieIdChange }) => {
     // fetch list of movies for given input
     async function getData() {
       const res = await fetch(
-        `https://api.themoviedb.org/3/search/movie?api_key=6fb6bda1f9046d8ccdde0221472351fa&language=en-US&page=1&include_adult=false&query=${input}`
+        `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_SECRET_KEY}&language=en-US&page=1&include_adult=false&query=${input}`
       );
       // result variable will store response object fetched from the api
       const result = await res.json();
