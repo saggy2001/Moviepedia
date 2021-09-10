@@ -9,7 +9,7 @@ const DetailComponent = ({ movieId }) => {
     // fetch movie detail for given movieId
     async function getData() {
       const res = await fetch(
-        `https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.REACT_APP_SECRET_KEY}&language=en-US`
+        `https://api.themoviedb.org/3/movie/${movieId}?api_key=6fb6bda1f9046d8ccdde0221472351fa&language=en-US`
       );
       // result variable will store response object fetched from the api
       const result = await res.json();

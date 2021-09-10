@@ -4,8 +4,6 @@ import List from "./components/ListComponent/List";
 import SearchBox from "./components/SearchBox/SearchBox";
 import "./App.css";
 
-console.log(process.env.REACT_APP_SECRET_KEY);
-
 const App = () => {
   // Initializing the input value
   const [input, setInput] = useState("");

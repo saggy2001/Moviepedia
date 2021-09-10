@@ -1,5 +1,8 @@
 {
   "projects": {
     "default": "moviepedia-db22c"
+  },
+  "someservice": {
+    "key": "${{ secrets.API_KEY }}"
   }
 }
