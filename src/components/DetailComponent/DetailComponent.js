@@ -2,23 +2,26 @@ import React, { useState, useEffect } from "react";
 import "./DetailComponent.css";
 
 const DetailComponent = ({ movieId }) => {
+  // Initialize a detail object variable
   const [detail, setDetail] = useState({});
 
   useEffect(() => {
+    // fetch movie detail for given movieId
     async function getData() {
       const res = await fetch(
         `https://api.themoviedb.org/3/movie/${movieId}?api_key=6fb6bda1f9046d8ccdde0221472351fa&language=en-US`
       );
+      // result variable will store response object fetched from the api
       const result = await res.json();
       console.log(result);
+      // set detail value
       setDetail(result);
-
-      // setData(result.results);
     }
     getData();
   }, [movieId]);
   return (
     <div className="detail-con">
+      {/* if movieId and detail has value then will show movie detail */}
       {detail.id && movieId ? (
         <div className="detail-box">
           <img
@@ -41,9 +44,13 @@ const DetailComponent = ({ movieId }) => {
           </p>
           <div>
             <b>Production Compnaies : </b>{" "}
-            {detail.production_companies.map((data, index) => {
-              return <span key={index}>{data.name + ", "}</span>;
-            })}
+            {detail.production_companies.length ? (
+              detail.production_companies.map((data, index) => {
+                return <span key={index}>{data.name + ", "}</span>;
+              })
+            ) : (
+              <p>Not Available</p>
+            )}
           </div>
         </div>
       ) : (

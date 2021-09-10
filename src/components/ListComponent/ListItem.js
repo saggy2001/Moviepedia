@@ -9,10 +9,12 @@ const ListItem = ({
   id,
   onMovieIdChange,
 }) => {
+  // Initialize a show variable with default value false
   const [show, setShow] = React.useState(false);
   return (
     <div
       className="item-con"
+      // onClick will set MovieId to id given by props
       onClick={() => {
         onMovieIdChange(id);
       }}
@@ -23,30 +25,28 @@ const ListItem = ({
           alt="movie_img"
           width="80px"
           height="80px"
-          style={{ background: "silver" }}
+          style={{
+            background: "silver",
+          }}
         />
         <div style={{ marginLeft: "15px" }}>
           <p>{title}</p>
-          {/* <p>Rated : 4/5</p> */}
           <p>Released on : {new Date(release_date).toDateString()} </p>
         </div>
       </div>
       <p className="row-2">
-        Overview : {show ? overview : overview.substring(0, 100)}{" "}
+        Overview :{" "}
+        {
+          // if show value is true will show whole overview string otherwise will show first 100 words
+          show ? overview : overview.substring(0, 100)
+        }{" "}
         <button
           onClick={() => {
+            //set value of show variable as true
             setShow(true);
           }}
-          style={
-            show
-              ? { display: "none" }
-              : {
-                  background: "transparent",
-                  border: "none",
-                  fontSize: "20px",
-                  cursor: "pointer",
-                }
-          }
+          //if show is true then will hide the expand button otherwise will show that
+          className={show ? "expand-button-hide" : "expand-button"}
         >
           ...
         </button>

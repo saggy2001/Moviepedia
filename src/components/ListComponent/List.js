@@ -3,26 +3,26 @@ import "./List.css";
 import ListItem from "./ListItem";
 
 const List = ({ input, onMovieIdChange }) => {
+  // Initailizing the data array
   const [data, setData] = useState([]);
 
   useEffect(() => {
+    // fetch list of movies for given input
     async function getData() {
       const res = await fetch(
         `https://api.themoviedb.org/3/search/movie?api_key=6fb6bda1f9046d8ccdde0221472351fa&language=en-US&page=1&include_adult=false&query=${input}`
       );
+      // result variable will store response object fetched from the api
       const result = await res.json();
-      // console.log(result.results);
+      // store array of movies in data
       setData(result.results);
     }
     getData();
   }, [input]);
-
   console.log(data);
   return (
-    <div
-      // style={{ padding: "15px", background: "#f5f5f5", width: "400px" }}
-      className="list-con"
-    >
+    <div className="list-con">
+      {/* will check if data has been loaded from the api or not if loaded and data is present then will show list of items */}
       {data ? (
         data.map((item) => (
           <ListItem

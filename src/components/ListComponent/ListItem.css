@@ -1,7 +1,6 @@
 .item-con {
   width: 90%;
   padding: 15px;
-  /* border: 1px solid black; */
   margin-left: 15px;
   margin-right: 15px;
   margin-bottom: 15px;
@@ -22,4 +21,14 @@
 
 .item-con .row-2 {
   margin-top: 10px;
+}
+
+.expand-button {
+  background: transparent;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+.expand-button-hide {
+  display: none;
 }
